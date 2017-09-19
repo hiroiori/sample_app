@@ -1,0 +1,2 @@
+module StaticRagesHelper
+end
