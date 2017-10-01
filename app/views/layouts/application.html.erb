@@ -10,6 +10,10 @@
 <body>
   <%= render 'layouts/header' %>                <!-- headerにはサイトのロゴなどを表示させている-->
   <div class="container">
+    
+    <% flash.each do |key, value| %>
+      <div class="alert <%= bootstrap_class_for(key) %>"><%= value %></div>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </div>
