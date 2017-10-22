@@ -20,9 +20,33 @@ $gray-medium-light: #eaeaea;
     @include box_sizing;
 }
 
+/* microposts */
+
+.microposts {
+    list-style: none;
+    margin: 10px 0 0 0;
+    
+    li {
+        padding: 10px 0;
+        border-top: 1px solid #e8e8e8;
+    }
+}
+
+.content {
+    display: block;
+}
+
+.timestamp {
+    color: $gray-light;
+}
+
 /* sidebar */
 
 aside {
+    textarea {
+        height: 100px;
+        margin-bottom: 5px;
+    }
     section {
         padding: 10px 0;
         border-top: 1px solid $gray-lighter;
