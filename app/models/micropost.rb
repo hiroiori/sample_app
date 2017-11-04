@@ -3,6 +3,10 @@ class Micropost < ActiveRecord::Base
   default_scope -> { order('created_at DESC') }
   validates :content, presence: true, length: { maximum: 140 }
   validates :user_id, presence: true
+  
+  has_attached_file :image, styles: { medium: "200x150>", thumb: "50x50>" }, default_url: "/images/:style/missing.png"
+  
+  validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/gif)
 
   def self.from_users_followed_by(user)
     followed_user_ids = "SELECT followed_id FROM relationships

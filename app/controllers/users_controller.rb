@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    User.find(params[:id].destroy)
+    User.find(params[:id]).destroy
     flash[:success] = "User destroyed."
-    redirect_to_users_url
+    redirect_to users_url
   end
   
   def following
@@ -36,5 +36,9 @@ class UsersController < ApplicationController
   
   def admin_user
     redirect_to(root_path) unless current_user.admin?
+  end
+  
+  def user_params
+    params.require(:user).permit(:name, :description, :image)
   end
 end

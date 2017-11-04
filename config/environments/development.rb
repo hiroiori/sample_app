@@ -27,5 +27,7 @@ SampleApp::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
+  
   config.action_mailer.default_url_options = {host: 'localhost', post: 3000}
 end

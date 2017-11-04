@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 1.5.3'
 
 #img file upload
 gem 'carrierwave'
-gem 'rmagick'
+gem 'paperclip', '~> 4.3.7'
 
 
 group :doc do
