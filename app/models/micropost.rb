@@ -4,7 +4,7 @@ class Micropost < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 140 }
   validates :user_id, presence: true
   
-  has_attached_file :image, styles: { medium: "200x150>", thumb: "50x50>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image, styles: { medium: "200x150>", thumb: "50x50>" }
   
   validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/gif)
 
