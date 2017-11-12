@@ -24,7 +24,7 @@ SampleApp::Application.configure do
     :user_name => ENV['SMTP_MAIL'],
     :password => ENV['SMTP_PASS'],
     :authentication => :plain,
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
   }
 
   # Print deprecation notices to the Rails logger.
